@@ -4,9 +4,9 @@
 #
 Name     : R-sp
 Version  : 1.2
-Release  : 25
-URL      : https://cran.r-project.org/src/contrib/sp_1.2-3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/sp_1.2-3.tar.gz
+Release  : 26
+URL      : https://cran.r-project.org/src/contrib/sp_1.2-4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/sp_1.2-4.tar.gz
 Summary  : Classes and Methods for Spatial Data
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -31,11 +31,11 @@ lib components for the R-sp package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484549410
+export SOURCE_DATE_EPOCH=1487768902
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1484549410
+export SOURCE_DATE_EPOCH=1487768902
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
