@@ -4,7 +4,7 @@
 #
 Name     : R-sp
 Version  : 1.2.5
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/sp_1.2-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sp_1.2-5.tar.gz
 Summary  : Classes and Methods for Spatial Data
@@ -16,10 +16,7 @@ BuildRequires : R-maptools
 BuildRequires : clr-R-helpers
 
 %description
-data; the classes document where the spatial location information
-  resides, for 2D or 3D data. Utility functions are provided, e.g. for
-  plotting data as maps, spatial selection, as well as methods for
-  retrieving coordinates, for subsetting, print, summary, etc.
+No detailed description available
 
 %package lib
 Summary: lib components for the R-sp package.
@@ -37,11 +34,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1499802058
+export SOURCE_DATE_EPOCH=1499807251
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1499802058
+export SOURCE_DATE_EPOCH=1499807251
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
