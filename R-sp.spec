@@ -4,7 +4,7 @@
 #
 Name     : R-sp
 Version  : 1.2.5
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/sp_1.2-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sp_1.2-5.tar.gz
 Summary  : Classes and Methods for Spatial Data
@@ -16,7 +16,10 @@ BuildRequires : R-maptools
 BuildRequires : clr-R-helpers
 
 %description
-No detailed description available
+data; the classes document where the spatial location information
+  resides, for 2D or 3D data. Utility functions are provided, e.g. for
+  plotting data as maps, spatial selection, as well as methods for
+  retrieving coordinates, for subsetting, print, summary, etc.
 
 %package lib
 Summary: lib components for the R-sp package.
@@ -34,11 +37,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1499807251
+export SOURCE_DATE_EPOCH=1502421322
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1499807251
+export SOURCE_DATE_EPOCH=1502421322
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -56,11 +59,6 @@ echo "FFLAGS = $FFLAGS -march=haswell -ftree-vectorize " >> ~/.R/Makevars
 echo "CXXFLAGS = $CXXFLAGS -march=haswell -ftree-vectorize " >> ~/.R/Makevars
 R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library sp
 for i in `find %{buildroot}/usr/lib64/R/ -name "*.so"`; do mv $i $i.avx2 ; mv $i.avx2 ~/.stash/; done
-echo "CFLAGS = $CFLAGS -march=skylake-avx512 -ftree-vectorize " > ~/.R/Makevars
-echo "FFLAGS = $FFLAGS -march=skylake-avx512 -ftree-vectorize " >> ~/.R/Makevars
-echo "CXXFLAGS = $CXXFLAGS -march=skylake-avx512 -ftree-vectorize " >> ~/.R/Makevars
-R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library sp
-for i in `find %{buildroot}/usr/lib64/R/ -name "*.so"`; do mv $i $i.avx512 ; mv $i.avx512 ~/.stash/; done
 echo "CFLAGS = $CFLAGS -ftree-vectorize " > ~/.R/Makevars
 echo "FFLAGS = $FFLAGS -ftree-vectorize " >> ~/.R/Makevars
 echo "CXXFLAGS = $CXXFLAGS -ftree-vectorize " >> ~/.R/Makevars
@@ -154,4 +152,3 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/sp/libs/sp.so
 /usr/lib64/R/library/sp/libs/sp.so.avx2
-/usr/lib64/R/library/sp/libs/sp.so.avx512
