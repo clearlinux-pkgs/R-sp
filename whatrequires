@@ -10,11 +10,11 @@ R-lmtest
 R-mapproj
 R-maps
 R-maptools
-R-microbenchmark
 R-multcomp
 R-pbkrtest
 R-quantreg
+R-rmarkdown
 R-sandwich
+R-shiny
 R-sp
-R-tibble
 R-tis
