@@ -3,6 +3,7 @@ R-Guerry
 R-RandomFields
 R-TSP
 R-VIM
+R-ade4
 R-adegraphics
 R-fossil
 R-geojson
@@ -16,4 +17,5 @@ R-raster
 R-rasterVis
 R-rgdal
 R-rgeos
+R-spData
 R-spdep
