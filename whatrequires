@@ -9,8 +9,6 @@ R-fossil
 R-geojson
 R-ggplot2
 R-leaflet
-R-lwgeom
-R-maps
 R-maptools
 R-polyCub
 R-raster
