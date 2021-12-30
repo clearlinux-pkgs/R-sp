@@ -4,7 +4,7 @@
 #
 Name     : R-sp
 Version  : 1.4.6
-Release  : 85
+Release  : 86
 URL      : https://cran.r-project.org/src/contrib/sp_1.4-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sp_1.4-6.tar.gz
 Summary  : Classes and Methods for Spatial Data
