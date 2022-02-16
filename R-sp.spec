@@ -4,7 +4,7 @@
 #
 Name     : R-sp
 Version  : 1.4.6
-Release  : 88
+Release  : 89
 URL      : https://cran.r-project.org/src/contrib/sp_1.4-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sp_1.4-6.tar.gz
 Summary  : Classes and Methods for Spatial Data
@@ -36,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641126730
+export SOURCE_DATE_EPOCH=1644970409
 
 %install
-export SOURCE_DATE_EPOCH=1641126730
+export SOURCE_DATE_EPOCH=1644970409
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
