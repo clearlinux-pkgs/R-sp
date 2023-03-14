@@ -1,7 +1,6 @@
 # This file contains recursive sources that require this package
 R-Guerry
 R-RandomFields
-R-TSP
 R-VIM
 R-ade4
 R-adegraphics
