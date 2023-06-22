@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-sp
-Version  : 1.6.1
-Release  : 103
-URL      : https://cran.r-project.org/src/contrib/sp_1.6-1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/sp_1.6-1.tar.gz
+Version  : 2.0.0
+Release  : 104
+URL      : https://cran.r-project.org/src/contrib/sp_2.0-0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/sp_2.0-0.tar.gz
 Summary  : Classes and Methods for Spatial Data
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -18,7 +18,8 @@ BuildRequires : buildreq-R
 data; the classes document where the spatial location information
   resides, for 2D or 3D data. Utility functions are provided, e.g. for
   plotting data as maps, spatial selection, as well as methods for
-  retrieving coordinates, for subsetting, print, summary, etc.
+  retrieving coordinates, for subsetting, print, summary, etc. From this
+  version, evolution status is set to '2L' using 'sf' in place of 'rgdal',
 
 %package lib
 Summary: lib components for the R-sp package.
@@ -39,10 +40,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685647728
+export SOURCE_DATE_EPOCH=1687448680
 
 %install
-export SOURCE_DATE_EPOCH=1685647728
+export SOURCE_DATE_EPOCH=1687448680
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
