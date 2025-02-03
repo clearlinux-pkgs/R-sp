@@ -16,5 +16,6 @@ R-raster
 R-rasterVis
 R-rgdal
 R-rgeos
+R-rworldmap
 R-spData
 R-spdep
